@@ -1,0 +1,21 @@
+<view class='detail-container'>
+  <view class='detail-title'>{{data.title}}</view>
+  <view class='detail-info'>
+    <view>
+      <text>{{data.source}}</text>
+      <text class='detail-date'>{{data.date}}</text>
+    </view>
+    <view>{{data.readCount}}</view>
+  </view>
+  <view class="detail-content-container" wx:for="{{data.content}}">
+    <view wx:if="{{'p' === item.type}}">
+      <text>{{item.text}}</text>
+    </view>
+    <view wx:elif="{{'strong' === item.type}}" >
+      <text class='content-bold'>{{item.text}}</text>
+    </view>
+    <view wx:else>
+      <image class='content-image' src="{{item.src}}"></image>
+    </view>
+  </view>
+</view>

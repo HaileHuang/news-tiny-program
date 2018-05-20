@@ -1,0 +1,35 @@
+.detail-container {
+  padding: 30rpx;
+}
+
+.detail-title {
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.detail-info {
+  margin-top: 20rpx;
+  color: #888;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-date {
+  margin-left: 20rpx;
+}
+
+.detail-content-container {
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.content-bold {
+  font-weight: bold;
+}
+
+.content-image {
+  width: 100%;
+  margin: 40rpx 0;
+}

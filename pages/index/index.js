@@ -23,9 +23,6 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
-  onNavItem(event) {
-    this.getAndSetNavNewsList(event.target.dataset.type)
-  },
   getAndSetNavNewsList(type, callback) {
     wx.request({
       url: "https://test-miniprogram.com/api/news/list",
@@ -37,8 +34,18 @@ Page({
           newsList: formatNewsListData(res.data.result),
           nowNavType: type,
         })
+      },
+      complete: () => {
         callback && callback()
       }
+    })
+  },
+  onNavItem(event) {
+    this.getAndSetNavNewsList(event.currentTarget.dataset.type)
+  },
+  onShowDetail(event) {
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + event.currentTarget.dataset.id,
     })
   }
 })
@@ -46,6 +53,7 @@ Page({
 const formatNewsListData = list => {
   list.forEach((item) => {
     item.date = util.formatTime(item.date)
+    item.firstImage = item.firstImage || util.defaultImage
   })
   return list
-} 
+}

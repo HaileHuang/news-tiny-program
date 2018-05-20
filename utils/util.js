@@ -13,6 +13,9 @@ const formatNum = num => {
   }
 }
 
+const defaultImage = 'http://img1.gtimg.com/news/pics/hv1/38/85/1076/69988613.jpg'
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  defaultImage: defaultImage,
 }
