@@ -1,0 +1,46 @@
+.navs-container {
+  display: flex;
+}
+
+.navs {
+  margin: 0 17rpx;    
+}
+
+.nav-selected {
+  font-weight: bold;
+}
+
+.news-item {
+  padding: 30rpx;
+}
+
+.news-content  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 460rpx;
+}
+
+.news-content-image {
+  width: 200rpx;
+  height: 150rpx;
+}
+
+.new-content-title {
+  font-size: 34rpx;
+}
+
+.new-content-other {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.new-content-date {
+  margin-left: 20rpx;
+}
+

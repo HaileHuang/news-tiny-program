@@ -1,0 +1,25 @@
+<view class='navs-container'>
+  <view class="navs" wx:for="{{navs}}">
+    <view wx:if="{{nowNavType === item.type}}">
+      <view class="nav-selected" data-type="{{item.type}}" bindtap="onNavItem">{{item.name}}</view>
+    </view>
+    <view wx:else>
+      <view class="" data-type="{{item.type}}" bindtap="onNavItem">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class="news-item" wx:for="{{newsList}}">
+    <view class="news-content" data-id="{{item.id}}">
+      <view class='news-content-text'>
+        <view class='new-content-title'>{{item.title}}</view>
+        <view class='new-content-other'>
+          <text>{{item.source}}</text>
+          <text class='new-content-date'>{{item.date}}</text>
+        </view>
+      </view>
+      <view><image class= 'news-content-image'src='{{item.firstImage}}'></image></view>
+    </view>
+  </view>
+</view>
